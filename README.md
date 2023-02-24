@@ -1,7 +1,4 @@
-## GASP_TRIGGER
---------------------------
-
-### 작성하면서 배웠던 부분
+## 작성하면서 배웠던 부분
 
 
 
@@ -10,6 +7,9 @@
 :root {
     --sec2_Height : 199vh /* 섹션 스크롤모션 범위 기준 */
 }
+
+#wrap section.section-02 { height:var(--sec2_Height) }
+/* 변수값을 불러옴 */
 
 ```
 
@@ -26,7 +26,7 @@ ease-in-out : 전환(transition) 효과가 천천히 시작되어, 천천히 끝
 cubic-bezier(n,n,n,n) : 전환(transition) 효과가 사용자가 정의한 cubic-bezier 함수에 따라 진행됩니다.
 
 
-### HTNL defer
+## HTNL defer
 
 ``` html
 
@@ -34,11 +34,11 @@ cubic-bezier(n,n,n,n) : 전환(transition) 효과가 사용자가 정의한 cubi
 
 ```
 
-<script> 태그의 defer 속성은 페이지가 모두 로드된 후에 해당 외부 스크립트가 실행됨을 명시합니다.
+script태그의 defer 속성은 페이지가 모두 로드된 후에 해당 외부 스크립트가 실행됨을 명시합니다.
 
 defer 속성은 불리언(boolean) 속성으로 명시하지 않으면 false 값을 가지게 되고, 명시하면 true 값을 가지게 됩니다.
 
-이 속성은 <script> 요소가 외부 스크립트를 참조하는 경우에만 사용할 수 있으므로, src 속성이 명시된 경우에만 사용할 수 있습니다.
+이 속성은 script요소가 외부 스크립트를 참조하는 경우에만 사용할 수 있으므로, src 속성이 명시된 경우에만 사용할 수 있습니다.
 
 
 참조된 외부 스크립트 파일을 다음과 같이 여러 가지 방법으로 실행시킬 수 있습니다.
