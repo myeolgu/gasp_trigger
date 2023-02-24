@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Futura;
+}
+
+.vh {
+  height: 100vh;
+  background-color: rgba(255, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10vw;
+  font-weight: bold;
+}
+.vh:before {
+  content: "100VH";
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.scenes {
+  position: relative;
+}
+.scenes__wrap, .scenes__items {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+}
+.scene-spacing {
+  height: 100vh;
+}
+
+.scene {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0rem 10%;
+  margin: 0 auto;
+}
+.scene__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-column-gap: 4em;
+  margin: 0 auto;
+}
+@media (min-width: 50em) {
+  .scene__grid {
+    grid-column-gap: 8em;
+  }
+}
+.scene__header {
+  max-width: 33em;
+  margin: 0 auto;
+  align-self: center;
+}
+.scene__header > div {
+  position: relative;
+  top: -15%;
+}
+.scene__title {
+  font-size: 2em;
+  margin-bottom: 0.25em;
+}
+@media (min-width: 50em) {
+  .scene__title {
+    font-size: 2.5em;
+  }
+}
+.scene__text {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+.scene__figure {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  margin-left: auto;
+  padding: 0;
+}
+.scene__img {
+  display: block;
+  width: 100%;
+  max-height: 90vh;
+  height: auto;
+}
+.scene__vid {
+  position: relative;
+  max-height: 80vh;
+  height: 40em;
+  background: #222;
+  aspect-ratio: 6/8;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.scene__vid > video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */

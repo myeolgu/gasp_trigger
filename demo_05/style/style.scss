@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    margin: 0;
+    font-family: Futura;
+  }
+
+  .vh {
+    height: 100vh;
+    background-color: rgba(255, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vw;
+    font-weight: bold;
+
+    &:before {
+      content: "100VH";
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .scenes {
+    position: relative;
+
+    &__wrap,
+    &__items {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &__wrap {
+    }
+  }
+
+  .scene-spacing {
+    height: 100vh;
+  }
+
+  .scene {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0rem 10%;
+    margin: 0 auto;
+
+    &__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      grid-column-gap: 4em;
+      margin: 0 auto;
+
+      @media (min-width: 50em) {
+        grid-column-gap: 8em;
+      }
+    }
+
+    &__header {
+      max-width: 33em;
+      margin: 0 auto;
+      align-self: center;
+
+      & > div {
+        position: relative;
+        top: -15%;
+      }
+    }
+
+    &__title {
+      font-size: 2em;
+      margin-bottom: 0.25em;
+
+      @media (min-width: 50em) {
+        font-size: 2.5em;
+      }
+    }
+
+    &__text {
+      font-size: 1.1em;
+      line-height: 1.5;
+    }
+
+    &__figure {
+      display: flex;
+      align-items: center;
+      height: 100vh;
+      margin-left: auto;
+      padding: 0;
+    }
+
+    &__img {
+      display: block;
+      // height: 100vh;
+      width: 100%;
+      max-height: 90vh;
+      height: auto;
+    }
+
+    &__vid {
+      position: relative;
+      max-height: 80vh;
+      height: 40em;
+      background: #222;
+      aspect-ratio: 6/8;
+      overflow: hidden;
+      object-fit: cover;
+
+      & > video {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
