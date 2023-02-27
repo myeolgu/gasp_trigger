@@ -20,7 +20,7 @@ header.to(".header_section h1", {
 // 4개의 section 이벤트
 const scenes = gsap.utils.toArray('.panel');
 const height = ((scenes.length) * 100) + '%';// 합이 400이 나와야 함 [ 4개의 section ]
-gsap.utils.toArray(".panel").forEach((panel, i) => {
+gsap.utils.toArray(".panel").forEach((panel) => {
   ScrollTrigger.create({
     trigger: panel,
     start: "center center",
